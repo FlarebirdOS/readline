@@ -1,11 +1,14 @@
 pkgname=readline
 pkgver=8.3
-pkgrel=1
+pkgrel=2
 pkgdesc="GNU readline library"
 arch=('x86_64')
 url="https://tiswww.case.edu/php/chet/readline/rltop.html"
 license=('GPL-3.0-only')
-depends=('glibc')
+depends=(
+    'glibc'
+    'ncurses'
+)
 backup=(etc/inputrc)
 options=('!emptydirs')
 source=(https://ftp.gnu.org/gnu/readline/${pkgname}-${pkgver}.tar.gz
